@@ -17,7 +17,7 @@ const Sidebar = (props) => {
   return (
     <> 
         <div className="text-left flex">
-          <button onClick={() => setIsOpen(true)} className="text-white bg-white hover:bg-teal-300 focus:bg-teal-300 font-medium rounded text-sm px-3 py-2.5 dark:bg-zinc-800 dark:hover:bg-zinc-600 focus:outline-none dark:focus:ring-blue-800" type="button" >
+          <button onMouseOver={() => setIsOpen(true)} className="text-white bg-white hover:bg-teal-300 focus:bg-teal-300 font-medium rounded text-sm px-3 py-2.5 dark:bg-zinc-800 dark:hover:bg-zinc-600 focus:outline-none dark:focus:ring-blue-800" type="button" >
             <svg className="w-5 h-5 text-black dark:dark:text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
             </svg>
