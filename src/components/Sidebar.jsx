@@ -1,16 +1,16 @@
 
 import React, { useState } from 'react'
-import 'flowbite';
 import Image from 'next/image';
 import me from '../../public/assets/img/me.jpg'
 import '../app/page.js'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import ButtonThemeToggle from '@/util/ButtonThemeToggle';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
     
     const route = useRouter();
     const path = usePathname()
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
     const pdfFileURL = "http://localhost:3000/assets/files/cv.pdf"
 
@@ -62,10 +62,7 @@ const Sidebar = () => {
                     </a>
 
                     <li>
-                        {/* <a href="#" className="flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white group">
-                        
-                        </a> */}
-                        
+                        <ButtonThemeToggle />
                     </li>
                 </ul>
             </div>
