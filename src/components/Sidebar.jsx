@@ -10,7 +10,9 @@ const Sidebar = (props) => {
     
     const route = useRouter();
     const path = usePathname()
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
+    localStorage.setItem('stillopen' , true)
+    const getOpen = localStorage.getItem('stillopen')
 
     const pdfFileURL = "http://localhost:3000/assets/files/cv.pdf"
 
@@ -24,7 +26,7 @@ const Sidebar = (props) => {
           </button>
         </div>
         
-        <div id="drawer-navigation" className={!isOpen ? "fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform bg-white dark:bg-zinc-800 -translate-x-full" : "fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform bg-white dark:bg-zinc-800 transform-none" } tabIndex="-1" aria-labelledby="drawer-navigation-label">
+        <div id="drawer-navigation"  className={!isOpen ? "fixed top-0 animate-ease-in-out left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform bg-white dark:bg-zinc-800 -translate-x-full" : "fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform bg-white dark:bg-zinc-800 transform-none" } tabIndex="-1" aria-labelledby="drawer-navigation-label">
             <div className='flex mt-11 ml-4 justify-center items-center w-max h-52'>
                 <Image className='rounded-full' src={me} width={200}  height={200} alt='me' />
             </div>
