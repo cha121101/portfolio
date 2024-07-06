@@ -59,25 +59,17 @@ const Main = () => {
                 </button>
                 <div className="py-4 overflow-y-auto">
                     <ul className="space-y-2 font-medium">
-                        <li  className={ componentName === "About" ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
-                            <button  onClick={() => {SetComponent(About); setComponentName('About')}} >
+                        <li onClick={() => {SetComponent(About); setComponentName('About')}}  className={ componentName === "About" ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
                                 <span className="ms-3">About me</span>
-                            </button>
                         </li>
-                        <li  className={ componentName === "Education" ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
-                            <button  onClick={() => {SetComponent(Education); setComponentName('Education')} } >
+                        <li onClick={() => {SetComponent(Education); setComponentName('Education')} } className={ componentName === "Education" ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
                                 <span className="ms-3">Education</span>
-                            </button>
                         </li>
-                        <li  className={ componentName === "Service" ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
-                            <button  onClick={() => {SetComponent(Services); setComponentName('Service')}}  >
-                                <span className="ms-3">Service</span>
-                            </button>
+                        <li onClick={() => {SetComponent(Services); setComponentName('Service')}}  className={ componentName === "Service" ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
+                                <span className="ms-3">Service</span>                        
                         </li>
-                        <li  className={ componentName === "Projects" ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
-                            <button  onClick={() => {SetComponent(Projects); setComponentName('Projects')}} >
+                        <li onClick={() => {SetComponent(Projects); setComponentName('Projects')}} className={ componentName === "Projects" ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>  
                                 <span className="ms-3">Projects</span>
-                            </button>
                         </li>
                         <a href={pdfFileURL} download={'CV-Charles-Gamboa'} className="flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <span className="ms-3">Download My CV</span>
