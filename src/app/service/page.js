@@ -2,8 +2,8 @@
 import dynamic from 'next/dynamic';
 
 export default function page() {
-    const Sidebar = dynamic(() => import('@/components/Footer'), { ssr: false });
-    const Footer = dynamic(() => import('@/components/Sidebar'), { ssr: false });
+    const Sidebar = dynamic(() => import('@/components/Sidebar'), { ssr: false });
+    const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
   return (
     <>
       <Sidebar />
