@@ -8,7 +8,7 @@ export default function page() {
   return (
 
     <>
-            <div className='px-20 grid max-sm:grid-cols-1 md:grid-cols-2 gap-2 max-sm:py-10 sm:py-10 md:py-20 lg:py-44'>
+            <div className='px-20 grid max-sm:grid-cols-1 md:grid-cols-2 gap-2 max-sm:py-10 sm:py-10 md:py-20 lg:py-44 overflow-x-hidden overflow-y-hidden'>
             <div className='px-4 animate-fade-up'>
                 <h2 className='text-center py-4 font-bold text-3xl dark:text-teal-300 text-zinc-800'>School</h2>
                 <ol className="relative border-s border-gray-200 dark:border-gray-700">                  

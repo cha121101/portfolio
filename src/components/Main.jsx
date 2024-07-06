@@ -41,7 +41,7 @@ const Main = () => {
 
   return (
     <>
-        <>
+        <div className=''>
             <div className="text-left flex">
             <button onMouseOver={() => setIsOpen(true)} className="text-white bg-white hover:bg-teal-300 focus:bg-teal-300 font-medium rounded text-sm px-3 py-2.5 dark:bg-zinc-800 dark:hover:bg-zinc-600 focus:outline-none dark:focus:ring-blue-800" type="button" >
                 <svg className="w-5 h-5 text-black dark:dark:text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -59,7 +59,7 @@ const Main = () => {
                 </button>
                 <div className="py-4 overflow-y-auto">
                     <ul className="space-y-2 font-medium">
-                        <li  className={ componentName === "About" || <About /> ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
+                        <li  className={ componentName === "About" ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
                             <button  onClick={() => {SetComponent(About); setComponentName('About')}} >
                                 <span className="ms-3">About me</span>
                             </button>
@@ -84,7 +84,7 @@ const Main = () => {
                         </a>
 
                         <li>
-                        <div className=''>
+                        <div className='px-2'>
                             <button type="button" onClick={() => setDarkMode(!darkMode)}
                                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" data-hs-theme-click-value="dark">
                                 <span>{darkMode ? <BedtimeIcon /> : <LightModeIcon />}</span>
@@ -94,8 +94,10 @@ const Main = () => {
                     </ul>
                 </div>
             </div>
-        </>
-        { component }
+        </div>
+        <div onClick={() => setIsOpen(false)}>
+            { component }
+        </div>
         {componentName != "About" ?  <Footer /> : ""}
         
     </>
