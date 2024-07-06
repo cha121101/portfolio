@@ -95,7 +95,7 @@ const Main = () => {
             </div>
         </>
         { component }
-        <footer />
+        <Footer />
         
     </>
   )
