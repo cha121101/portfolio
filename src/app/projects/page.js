@@ -1,14 +1,9 @@
 "use client"
-import Footer from '@/components/Footer';
-import Sidebar from '@/components/Sidebar';
-import ViewTimelineRoundedIcon from '@mui/icons-material/ViewTimelineRounded';
-import Link from 'next/link'
-
-
-
-
+import dynamic from 'next/dynamic';
 
 export default function page() {
+    const Sidebar = dynamic(() => import('@/components/Sidebar'), { ssr: false });
+    const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
   return (
     <>
         <Sidebar />
@@ -32,7 +27,6 @@ export default function page() {
                 <h2 className='text-2xl font-extrabold text-gray-600 dark:text-teal-300 opacity-0 '> Hopefully I will  land a job</h2>
                 </div>
             </div>
-
         </div>
         <Footer />
 
