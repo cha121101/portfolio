@@ -2,11 +2,9 @@
 import dynamic from 'next/dynamic';
 
 export default function page() {
-    const Sidebar = dynamic(() => import('@/components/Sidebar'), { ssr: false });
-    const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
+  
   return (
     <>
-        <Sidebar />
         <h2 className='text-center py-4 font-bold text-3xl dark:text-teal-300 text-gray-600 mb-10'>Projects</h2>
         <div className="flex flex-wrap justify-center max-sm:pb-10 sm:pb-10 md:pb-20 lg:pb-32">
             <div className="p-4 max-w-sm animate-fade-up">
@@ -28,8 +26,6 @@ export default function page() {
                 </div>
             </div>
         </div>
-        <Footer />
-
     </>
   );
 }

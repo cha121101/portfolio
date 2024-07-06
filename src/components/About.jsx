@@ -11,8 +11,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 
 
 const About = () => {
-    const Sidebar = dynamic(( ) => import('@/components/Sidebar'));
-  return (
+
+return (
     <div className='grid max-sm:grid-cols-1 sm:grid-cols-2 max-md:grid-cols-1  gap-1'>
     <div className='h-max  dark:bg-zinc-800  max-md:py-28 md:py-28 lg:py-44 xl:py-32 px-12 animate-fade-up animate-once max-sm:hidden max-md:hidden max-lg:block'>
        <Image alt='Grad pic' className='rounded-lg' src={gradpic} height={500} width={700} />

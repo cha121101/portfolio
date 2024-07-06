@@ -5,12 +5,9 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link'
 
 export default function page() {
-    const Sidebar = dynamic(() => import('@/components/Sidebar'), { ssr: false });
-    const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
   return (
 
     <>
-        <Sidebar />
             <div className='px-20 grid max-sm:grid-cols-1 md:grid-cols-2 gap-2 max-sm:py-10 sm:py-10 md:py-20 lg:py-44'>
             <div className='px-4 animate-fade-up'>
                 <h2 className='text-center py-4 font-bold text-3xl dark:text-teal-300 text-zinc-800'>School</h2>
@@ -116,7 +113,7 @@ export default function page() {
                 </ol>
             </div>
             </div>
-        <Footer />
+
     </>
   );
 }

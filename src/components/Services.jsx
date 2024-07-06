@@ -1,13 +1,10 @@
-"use client"
-import dynamic from 'next/dynamic';
+import React from 'react'
 
-export default function page() {
-    const Sidebar = dynamic(() => import('@/components/Sidebar'), { ssr: false });
-    const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
+const Services = () => {
   return (
     <>
-      <Sidebar />
-        <h2 className='text-center py-4 font-bold text-3xl dark:text-teal-300 text-gray-600'>Services</h2>
+    
+    <h2 className='text-center py-4 font-bold text-3xl dark:text-teal-300 text-gray-600'>Services</h2>
         <div className="flex flex-wrap justify-center max-sm:pb-10 sm:pb-10 md:pb-20 lg:pb-32">
             <div className="p-4 max-w-sm animate-fade-up">
                 <div className="flex rounded-lg h-full dark:bg-gray-600 bg-white border dark:border-gray-700 p-8 flex-col">
@@ -81,9 +78,8 @@ export default function page() {
                 </div>
             </div>
         </div>
-      <Footer />
-
-
     </>
-  );
+  )
 }
+
+export default Services
