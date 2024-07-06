@@ -36,7 +36,7 @@ const Main = () => {
 
     const [component, SetComponent] = useState(<About />)
 
-    const pdfFileURL = "http://localhost:3000/assets/files/cv.pdf"
+    const pdfFileURL = "https://chaportfolio.netlify.app/assets/files/cv.pdf"
 
   return (
     <>
