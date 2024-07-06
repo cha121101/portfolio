@@ -12,7 +12,7 @@ const Main = () => {
     const Education = dynamic(() => import('@/components/Education'),{ssr :true});
     const Projects = dynamic(() => import('@/components/Projects'),{ssr :true});
     const Services = dynamic(() => import('@/components/Services'),{ssr :true});
-
+    const Footer = dynamic(() => import('@/components/Footer'),{ssr :true});
     const [darkMode, setDarkMode] = useState(true);
 
     useEffect(() => {
@@ -58,22 +58,22 @@ const Main = () => {
                 </button>
                 <div className="py-4 overflow-y-auto">
                     <ul className="space-y-2 font-medium">
-                        <li  className={ component === "/about" ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
+                        <li  className={ component === "About" || <About /> ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
                             <button  onClick={() => SetComponent(About)} >
                                 <span className="ms-3">About me</span>
                             </button>
                         </li>
-                        <li  className={ component === "/education" ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
+                        <li  className={ component === "Education" ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
                             <button  onClick={() => SetComponent(Education) } >
                                 <span className="ms-3">Education</span>
                             </button>
                         </li>
-                        <li  className={ component === "/service" ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
+                        <li  className={ component === "Service" ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
                             <button  onClick={() => SetComponent(Services)}  >
                                 <span className="ms-3">Service</span>
                             </button>
                         </li>
-                        <li  className={ component === "/projects" ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
+                        <li  className={ component === "Projects" ? "text-lg bg-teal-300 hover:text-white flex  items-center p-2 text-gray-900 rounded-lg dark:text-gray-900 hover:bg-teal-500 dark:hover:bg-teal-100 group" : "flex hover:underline hover:underline-offset-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" }>
                             <button  onClick={() => SetComponent(Projects)} >
                                 <span className="ms-3">Projects</span>
                             </button>
@@ -95,6 +95,8 @@ const Main = () => {
             </div>
         </>
         { component }
+        <footer />
+        
     </>
   )
 }
