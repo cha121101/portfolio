@@ -3,8 +3,10 @@
 import ViewTimelineRoundedIcon from '@mui/icons-material/ViewTimelineRounded';
 import dynamic from 'next/dynamic';
 import Link from 'next/link'
+import Footer from './Footer';
 
 export default function page() {
+    const Footer = dynamic(() => import('@/components/Footer'),{ssr :true});
   return (
 
     <>
@@ -113,7 +115,7 @@ export default function page() {
                 </ol>
             </div>
             </div>
-
+            <Footer />
     </>
   );
 }

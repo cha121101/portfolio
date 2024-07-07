@@ -1,6 +1,8 @@
+import dynamic from 'next/dynamic';
 import React from 'react'
 
 const Services = () => {
+    const Footer = dynamic(() => import('@/components/Footer'),{ssr :true});
   return (
     <>
     
@@ -78,6 +80,7 @@ const Services = () => {
                 </div>
             </div>
         </div>
+    <Footer />
     </>
   )
 }

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import BedtimeIcon from '@mui/icons-material/Bedtime';
 import me from '../../public/assets/img/me.jpg'
+import Footer from './Footer';
 
 
 const Main = () => {
@@ -12,7 +13,7 @@ const Main = () => {
     const Education = dynamic(() => import('@/components/Education'),{ssr :true});
     const Projects = dynamic(() => import('@/components/Projects'),{ssr :true});
     const Services = dynamic(() => import('@/components/Services'),{ssr :true});
-    const Footer = dynamic(() => import('@/components/Footer'),{ssr :true});
+ 
     const [darkMode, setDarkMode] = useState(true);
     const [componentName, setComponentName] = useState('About');
 
@@ -90,7 +91,7 @@ const Main = () => {
         <div onClick={() => setIsOpen(false)}>
             { component }
         </div>
-        {componentName != "About" ?  <Footer /> : ""}
+       
         
     </>
   )
