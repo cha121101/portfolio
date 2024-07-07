@@ -23,7 +23,7 @@ export default function page() {
             </div>
             <div className="p-4 max-w-sm animate-fade-up">
                 <div className="flex rounded-lg h-full dark:bg-gray-600  bg-white border pt-10 dark:border-gray-700 px-2 sm:pb-10 flex-col">
-                        <Image alt='portfolio' src={PortfolioDarkmode} className='px-2' />
+                        <Image alt='portfolio' src={PortfolioDarkmode} className='px-2' height={500} width={500} />
                         <div className='px-3 pt-7'>
                             <h2 className='text-2xl font-semibold italic text-gray-600 dark:text-teal-300 py-2'> My portfolio</h2>
                             <span className='text-base font-normal text-gray-600 dark:text-white '> This website is a online collection showcases my work, skills, and experiences, providing a visual and interactive way to present my projects and professional accomplishments.  </span>
