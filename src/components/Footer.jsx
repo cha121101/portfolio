@@ -5,7 +5,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-white rounded-lg shadow m-4 dark:border-gray-700 dark:bg-gray-700 animate-fade-up">
+    <footer className="fixed bottom-0 left-0 right-0 bg-white rounded-lg shadow m-4 dark:border-gray-700 dark:bg-gray-700 animate-fade-up">
         <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span className="text-sm font-normal text-gray-500 dark:text-gray-300">Created This by Charles Gamboa
         </span>
