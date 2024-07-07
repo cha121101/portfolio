@@ -10,8 +10,8 @@ export default function page() {
   return (
 
     <>
-            <h2 className='text-center pt-4 font-bold text-3xl dark:text-teal-300 text-gray-600 '>Education</h2>
-            <div className='px-20 grid max-sm:grid-cols-1 md:grid-cols-2 gap-2 max-sm:py-10 sm:py-10 md:py-20 lg:py-20 overflow-x-hidden overflow-y-hidden'>
+            <h2 className='text-center max-sm:mt-10 sm:10 md:mt-28 font-bold text-3xl dark:text-teal-300 text-gray-600 mb-10 '>Education</h2>
+            <div className='px-20 grid max-sm:grid-cols-1 md:grid-cols-2 gap-2 max-sm:py-10 sm:pb-16 md:pyv-30 lg:pb-30 overflow-x-hidden overflow-y-hidden'>
             <div className='px-4 animate-fade-up'>
                 <h2 className='text-center py-4 font-bold text-3xl dark:text-teal-300 text-zinc-800'>School</h2>
                 <ol className="relative border-s border-gray-200 dark:border-gray-700">                  
